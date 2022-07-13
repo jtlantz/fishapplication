@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "35462671261",
+    "project_id": "mob-proj-fp",
+    "storage_bucket": "mob-proj-fp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35462671261:android:77ab60d654499b61bd1d74",
+        "android_client_info": {
+          "package_name": "com.example.fisher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "35462671261-urjlkmilfp5pnag4g87h9q3gpi0v0eg2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnqagoSpGFd5GiHQq-_4eVR-LuYPb875k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "35462671261-urjlkmilfp5pnag4g87h9q3gpi0v0eg2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
