@@ -20,4 +20,17 @@ class ApiConstants {
   static const String apiKeyWeather = '';
 }
 
+const Map<String, String> descriptionMapping = {
+  "English": "Thai",
+  "clear sky" : "ท้องฟ้าแจ่มใส่",
+  "few clouds" : "มีเมฆเล็กน้อย",
+  "scattered cloud" : "เมฆกระจัดกระจาย",
+  "broken clouds" : "เมฆแตก",
+  "shower rain" : "ฝนโปรยปราย",
+  "rain" : "ฝนตก",
+  "thunderstorm" : "พายุฝนฟ้าคะนอง",
+  "snow" : "หิมะตก",
+  "mist" : "หมอกปกคลุม",
+};
+
 const kAllFishImagePath = 'lib/images/all_fish.jpg';
