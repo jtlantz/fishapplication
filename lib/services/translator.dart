@@ -1,3 +1,4 @@
+
 import 'package:fisher/components/constant.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -20,4 +21,5 @@ Future translateThai(input) async {
   var translator = GoogleTranslator();
   var result = await translator.translate(input, from: 'en', to: 'th');
   return result.text;
+
 }

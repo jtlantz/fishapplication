@@ -8,7 +8,9 @@ class Weather {
   final double low;
   final double high;
   final String description;
+
   final String imageDestination;
+
 
   Weather(
       { required this.lat,
@@ -18,16 +20,21 @@ class Weather {
         required this.low,
         required this.high,
         required this.description,
+
         required this.imageDestination
+
       });
 
   @override
   String toString() {
+
     return 'Weather{temp: $temp, feelsLike: $feelsLike, low: $low, high: $high, description: $description, icon: $imageDestination}';
+
   }
   factory Weather.fromJson(json, desc) {
 
     return Weather(
+
         lat: json['lat'],
         lon: json['lon'],
         temp: json['current']['temp'].toDouble()-273.15,
@@ -36,6 +43,7 @@ class Weather {
         high: json['daily'][0]['temp']['max'].toDouble()-273.15,
         description: desc,
         imageDestination: 'http://openweathermap.org/img/wn/${json['current']['weather'][0]['icon']}@2x.png'
+
     );
   }
 }

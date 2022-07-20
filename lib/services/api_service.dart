@@ -6,9 +6,9 @@ import 'dart:convert';
 
 import '../model/weather.dart';
 import '../model/fish.dart';
+
 import '../model/rain.dart';
 
-import 'translator.dart';
 
 // https://stackoverflow.com/questions/53299447/flutter-http-headers
 Map<String, String> requestHeaders = {
@@ -40,6 +40,7 @@ Future<Fish> getTodayFish() async {
   var res = await data.first;
   return res.first;
 }
+
 
 // Send get request to data.go
 // Read all the records and turn it into
@@ -76,6 +77,7 @@ Future getLatLong(String city) async {
 // Send request to OpenWeather API
 // Parse in String CityInThai
 // Return all the necessary information
+
 Future<Weather> getCurrentWeather(cityInThai) async {
   var translated = await translateEnglish(cityInThai);
   var geolocation = await getLatLong(translated);
@@ -98,12 +100,9 @@ Future<Weather> getCurrentWeather(cityInThai) async {
         low: 0,
         high: 0,
         description: 'ไม่พบข้อมูลการตรวจสภาพอากาศ, กรุณาลองพิมเป็นภาษาอังกฦษ',
+
         imageDestination: 'https://cdn0.iconfinder.com/data/icons/shift-free/32/Error-512.png'
+
     );
   }
 }
-
-//หนองปรือ
-// ชลบุรี
-// พัทยา
-// สมุทรปราการ
