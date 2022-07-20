@@ -35,7 +35,7 @@ class _LauncherState extends State<Launcher> {
 
   final items = [
     const BottomNavigationBarItem(icon: Icon(Icons.home), label: 'หน้าแรก'),
-    const BottomNavigationBarItem(icon: Icon(Icons.cloud), label: 'สภาพ อากาศ'),
+    const BottomNavigationBarItem(icon: Icon(Icons.cloud), label: 'สภาพอากาศ'),
     const BottomNavigationBarItem(icon: Icon(Icons.search), label: 'ค้นหา'),
     const BottomNavigationBarItem(icon: Icon(Icons.info), label: 'ช่วยเหลือ'),
 

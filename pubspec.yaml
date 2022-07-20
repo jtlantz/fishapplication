@@ -43,6 +43,9 @@ dependencies:
   cached_network_image: ^3.2.0
   # date convert:
   intl: ^0.17.0
+  translator: ^0.1.7
+  # database
+  sqflite: ^2.0.0+3
 
 
 dev_dependencies:
