@@ -141,6 +141,7 @@ class _ForecastState extends State<Forecast> {
         )),
         backgroundColor: kMainColor,
       ),
+      backgroundColor: kSecondaryColor,
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -159,7 +160,7 @@ class _ForecastState extends State<Forecast> {
                     style: kTextStyle,
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: kSecondaryColor,
+                      fillColor: kMainColor,
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8.0),
                         borderSide: BorderSide.none,
@@ -176,7 +177,7 @@ class _ForecastState extends State<Forecast> {
                     onPressed: _searchWeather,
                     style: OutlinedButton.styleFrom(
                         textStyle: kLabelInfoStyle,
-                        side: const BorderSide(width: 1, color: kMainColor)),
+                        side: const BorderSide(width: 2, color: kMainColor)),
                     child: const Text("ค้นหา"))
               ],
             ),

@@ -26,3 +26,4 @@ class ApiConstants {
 // fixed Image Path
 const kAllFishImagePath = 'lib/images/all_fish.jpg';
 const kDOFImagePath = 'lib/images/dof.png';
+const kFishIconPath = 'lib/icons/fish.png';

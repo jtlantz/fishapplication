@@ -33,6 +33,7 @@ class _HelpState extends State<Help> {
         title: const Center(child: Text("ช่วยเหลือ", style: kLabelTextStyle,)),
         backgroundColor: kMainColor,
       ),
+      backgroundColor: kSecondaryColor,
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(8.0),

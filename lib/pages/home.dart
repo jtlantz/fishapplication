@@ -92,6 +92,7 @@ class _HomeState extends State<Home> {
         title: const Center(child: Text("หน้าแรก", style: kLabelTextStyle)),
         backgroundColor: kMainColor,
       ),
+      backgroundColor: kSecondaryColor,
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(

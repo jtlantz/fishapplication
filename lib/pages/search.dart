@@ -63,6 +63,7 @@ class _SearchState extends State<Search> {
         //   IconButton(onPressed: _showHelpDialog, icon: const Icon(Icons.help))
         // ],
       ),
+      backgroundColor: kSecondaryColor,
       body: Column(
         children: [
           const Divider(height: 10, color: Colors.transparent),
