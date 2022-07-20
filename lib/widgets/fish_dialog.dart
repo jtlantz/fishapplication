@@ -14,9 +14,9 @@ class FishInformationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: CircleAvatar(child: Text('${fish.id}')),
+      leading: CircleAvatar(child: Image.asset(kFishIconPath), radius: 30,),
       title: Text(fish.thaiName,style: kLabelTextStyle),
-      subtitle: Text(fish.localName, style: kTextStyle),
+      subtitle: Text("ชื่อท้องถิ่น: ${fish.localName}", style: kTextStyle),
       onTap: (){
         showDialog(
             context: context,
@@ -69,7 +69,7 @@ _childDialog(BuildContext context, Fish fish) {
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(12),
                   topRight: Radius.circular(12))),
-          child: Image.asset(kAllFishImagePath, fit: BoxFit.fill), //TODO FIX PATH
+          child: Image.network(fish.imgPath, fit: BoxFit.fill), //TODO FIX PATH
         ),
         Padding(
           padding: const EdgeInsets.only(top: 8.0, bottom: 12.0, left: 8.0, right: 8.0),

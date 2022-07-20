@@ -6,7 +6,6 @@ import 'package:intl/intl.dart';
 
 import '../model/fish.dart';
 import '../widgets/fish_dialog.dart';
-import 'package:intl/intl.dart';
 
 class Home extends StatefulWidget {
   static const routeName = '/';
@@ -27,7 +26,7 @@ class _HomeState extends State<Home> {
   void initState(){
     todayFish = Fish(id: 0, thaiName: "", localName: "test", enName: "test",
         scienceName: "test", familyName: "test", description: "test",
-        location: "test"); // initialize todayFish (cuz sometimes loading slow)
+        location: "test", imgPath: "yooo"); // initialize todayFish (cuz sometimes loading slow)
     load();
     super.initState();
   }
@@ -93,6 +92,7 @@ class _HomeState extends State<Home> {
         title: const Center(child: Text("หน้าแรก", style: kLabelTextStyle)),
         backgroundColor: kMainColor,
       ),
+      backgroundColor: kSecondaryColor,
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(
@@ -109,10 +109,13 @@ class _HomeState extends State<Home> {
                   children: [
                     buildImageCard("ปลาทั้งหมด", const Icon(Icons.clear_all_outlined, color: kIconColor),
                         "ฐานข้อมูล",kAllFishImagePath, fishPage),
+                    const Divider(height: 20, color: Colors.transparent),
                   ],
+
                 ),
               ),
-            )
+            ),
+
           ],
         ),
       ),

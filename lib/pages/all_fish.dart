@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fisher/components/constant.dart';
 import 'package:fisher/services/api_service.dart';
 import 'package:fisher/widgets/fish_dialog.dart';
@@ -29,12 +28,12 @@ class _ListFishPageState extends State<ListFishPage> {
     _allResults = getFishList();
   }
 
-  // @override
-  // void dispose() {
-  //   _searchController.removeListener(_onSearchChanged);
-  //   _searchController.dispose();
-  //   super.dispose();
-  // }
+  @override
+  void dispose() {
+    _searchController.removeListener(_onSearchChanged);
+    _searchController.dispose();
+    super.dispose();
+  }
 
   _onSearchChanged() {
     setState(() {});
@@ -46,7 +45,7 @@ class _ListFishPageState extends State<ListFishPage> {
 
   Widget _showHelpDialog() {
     return Text("yoyo");
-  } // TODO
+  } // TODO1d
 
   @override
   Widget build(BuildContext context) {
@@ -58,6 +57,7 @@ class _ListFishPageState extends State<ListFishPage> {
           IconButton(onPressed: _showHelpDialog, icon: const Icon(Icons.help))
         ],
       ),
+      backgroundColor: kSecondaryColor,
       body: Column(
         children: [
           const Divider(height: 10, color: Colors.transparent),

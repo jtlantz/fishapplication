@@ -5,6 +5,8 @@
 import 'dart:convert';
 
 
+List<Fish> FishModelFromJson(String str) => List<Fish>.from(json.decode(str).map((x) => Fish.fromJson(x)));
+String FishModelJson(List<Fish> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class Fish {
   Fish({
@@ -16,42 +18,47 @@ class Fish {
     required this.familyName,
     required this.description,
     required this.location,
+    required this.imgPath,
   });
 
-  int id;
-  String thaiName;
-  String localName;
-  String enName;
-  String scienceName;
-  String familyName;
-  String description;
-  String location;
+  final int id;
+  final String thaiName;
+  final String localName;
+  final String enName;
+  final String scienceName;
+  final String familyName;
+  final String description;
+  final String location;
+  final String imgPath;
 
-
+  // create fish from json
+  // get data from data.go
   factory Fish.fromJson(Map<String, dynamic> json) => Fish(
-    id: json["รหัสสัตว์น้ำ"],
-    thaiName: json["ชื่อไทย"],
+    id: json["_id"],
+    thaiName: json["ชื่อไทย"]?? "-",
     localName: json["ชื่อท้องถิ่น"]?? "-",
     enName: json["ชื่อสามัญ"]?? "-",
     scienceName: json["ชื่อวิทยาศาสตร์"]?? "-",
     familyName: json["ชื่อวงศ์สัตว์น้ำ"]?? "-",
     description: json["ลักษณะชีววิทยาทั่วไป"],
     location: json["ถิ่นที่อาศัย"],
+    imgPath: json["Path เก็บภาพ (เล็ก)"],
   );
 
-
+  // create a map
+  // use to add to db
   Map<String, dynamic> toJson() => {
-    "_id": id,
-    "รหัสสัตว์น้ำ": thaiName,
-    "ชื่อไทย": localName,
-    "ชื่อท้องถิ่น": enName,
-    "ชื่อสามัญ": scienceName,
-    "ชื่อวิทยาศาสตร์": familyName,
-    "ชื่อวงศ์สัตว์น้ำ": description,
-    "ชื่อ/ปีที่เผยแพร่": location,
+    "id": id,
+    "thaiName": thaiName,
+    "localName": localName,
+    "enName": enName,
+    "scienceName": scienceName,
+    "familyName": familyName,
+    "description": description,
+    "location": location,
+    "imgPath": imgPath,
   };
 
-  List<Fish> FishModelFromJson(String str) => List<Fish>.from(json.decode(str).map((x) => Fish.fromJson(x)));
-  String FishModelJson(List<Fish> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+
 }
 
